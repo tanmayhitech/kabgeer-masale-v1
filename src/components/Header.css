@@ -1,0 +1,597 @@
+/* ================================================
+   KABGEER MASALE — ROYAL HEADER
+   ================================================ */
+
+/* Header Wrapper */
+.header-wrapper {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--color-bg, #faf6f0);
+  box-shadow: 0 2px 16px rgba(26, 47, 34, 0.06);
+  border-bottom: 1.5px solid rgba(212, 175, 55, 0.15);
+}
+
+
+/* ================================================
+   TOP MARQUEE BAR
+   ================================================ */
+.top-bar {
+  background: linear-gradient(135deg, #1a2f22 0%, #243d2e 100%);
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.72rem;
+  padding: 0.3rem 0;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.top-bar-marquee {
+  display: flex;
+  width: max-content;
+  animation: scrollMarquee 45s linear infinite;
+}
+
+.top-bar-marquee:hover {
+  animation-play-state: paused;
+}
+
+.top-bar-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding-right: 50px;
+}
+
+.gold-accent {
+  color: #d4af37;
+  font-weight: 700;
+  margin: 0 4px;
+}
+
+@keyframes scrollMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+/* ================================================
+   MAIN HEADER
+   ================================================ */
+.main-header {
+  padding: 0.4rem 0;
+  position: relative;
+  overflow: visible;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.03);
+}
+
+.header-brand-logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  mix-blend-mode: multiply;
+}
+
+
+/* ================================================
+   DESKTOP NAVIGATION — ROYAL SERIF
+   ================================================ */
+.desktop-nav {
+  display: none;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: flex;
+  }
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.94rem;
+  font-weight: 500;
+  color: #4a6550;
+  text-decoration: none;
+  padding: 0.5rem 1.1rem;
+  border-radius: 28px;
+  position: relative;
+  letter-spacing: 0.2px;
+  border: 1.5px solid transparent;
+  transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nav-link svg {
+  transition: color 0.25s ease;
+}
+
+/* Hover — soft gold glow */
+.nav-link:hover {
+  color: #1a2f22;
+  background-color: rgba(212, 175, 55, 0.08);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.nav-link:hover svg {
+  color: #d4af37;
+}
+
+/* Active — royal green pill with gold text */
+.nav-link.active {
+  color: #d4af37;
+  background-color: #1a2f22;
+  border-color: rgba(212, 175, 55, 0.5);
+  font-weight: 600;
+  font-style: italic;
+  box-shadow: 0 3px 12px rgba(26, 47, 34, 0.25), inset 0 1px 0 rgba(212, 175, 55, 0.15);
+}
+
+.nav-link.active svg {
+  color: #d4af37;
+}
+
+
+/* ================================================
+   HEADER ACTIONS (Search, User, Cart)
+   ================================================ */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-primary, #1a2f22);
+  cursor: pointer;
+  padding: 9px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.icon-btn:hover {
+  background-color: rgba(26, 47, 34, 0.08);
+  transform: translateY(-1px);
+}
+
+/* Search trigger active state */
+.search-trigger.search-active {
+  background-color: #1a2f22;
+  color: #d4af37;
+}
+
+/* User button highlight on auth pages */
+.user-btn-active {
+  background-color: rgba(212, 175, 55, 0.12);
+  border: 1.5px solid rgba(212, 175, 55, 0.4);
+}
+
+.user-btn-active::after {
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #d4af37;
+}
+
+/* Cart */
+.cart-btn {
+  background-color: var(--color-primary, #1a2f22);
+  color: #ffffff;
+  padding: 9px 14px;
+  border-radius: 22px;
+  gap: 2px;
+}
+
+.cart-btn:hover {
+  background-color: #2b4a36;
+  transform: translateY(-1px);
+}
+
+.cart-badge {
+  background-color: #d4af37;
+  color: #1a2f22;
+  font-size: 0.7rem;
+  font-weight: 800;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3px;
+}
+
+
+/* ================================================
+   SEARCH PANEL — PREMIUM DROPDOWN
+   ================================================ */
+.search-container {
+  position: relative;
+}
+
+.search-panel {
+  position: absolute;
+  top: calc(100% + 14px);
+  right: -40px;
+  width: 400px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(26, 47, 34, 0.18), 0 0 0 1px rgba(212, 175, 55, 0.15);
+  z-index: 9999;
+  overflow: hidden;
+  animation: panelSlideIn 0.2s ease;
+  border: 1.5px solid rgba(212, 175, 55, 0.2);
+}
+
+@keyframes panelSlideIn {
+  from { opacity: 0; transform: translateY(-8px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.search-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px 10px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+}
+
+.search-panel-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: italic;
+  color: #1a2f22;
+  letter-spacing: 0.3px;
+}
+
+.search-panel-close {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.search-panel-close:hover {
+  background-color: rgba(26, 47, 34, 0.06);
+  color: #1a2f22;
+}
+
+.search-panel-form {
+  display: flex;
+  align-items: center;
+  padding: 10px 18px;
+  gap: 10px;
+  border-bottom: 1px solid rgba(26, 47, 34, 0.06);
+}
+
+.search-panel-icon {
+  color: #d4af37;
+  flex-shrink: 0;
+}
+
+.search-panel-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.92rem;
+  padding: 6px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1a2f22;
+}
+
+.search-panel-input::placeholder {
+  color: #b0b8b2;
+  font-style: italic;
+}
+
+
+/* Search Results */
+.search-results {
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+.search-results-label {
+  padding: 10px 18px 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #d4af37;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 18px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.15s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.search-result-item:hover {
+  background-color: rgba(212, 175, 55, 0.06);
+}
+
+.search-result-img-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #faf6f0, #f0ece4);
+  flex-shrink: 0;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.search-result-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.search-result-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+  flex: 1;
+}
+
+.search-result-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1a2f22;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search-result-meta {
+  font-size: 0.76rem;
+  color: #8a9b8e;
+}
+
+.search-result-price {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a2f22;
+  flex-shrink: 0;
+  background: rgba(212, 175, 55, 0.1);
+  padding: 3px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.search-viewall {
+  display: block;
+  width: 100%;
+  padding: 14px 18px;
+  border: none;
+  border-top: 1px solid rgba(212, 175, 55, 0.12);
+  background: linear-gradient(to right, rgba(26, 47, 34, 0.03), rgba(212, 175, 55, 0.05));
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1a2f22;
+  text-align: center;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  letter-spacing: 0.3px;
+  transition: background-color 0.15s ease;
+}
+
+.search-viewall:hover {
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.search-empty {
+  padding: 30px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #b0b8b2;
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+
+/* Search Backdrop */
+.search-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(26, 47, 34, 0.25);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  z-index: 999;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/* ================================================
+   MOBILE BOTTOM NAVIGATION
+   ================================================ */
+.mobile-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 62px;
+  background-color: rgba(250, 246, 240, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  z-index: 1000;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 0.5rem;
+  box-shadow: 0 -4px 24px rgba(26, 47, 34, 0.06);
+}
+
+@media (max-width: 767px) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+
+  .header-user-btn {
+    display: none;
+  }
+
+  .search-panel {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    width: auto;
+    max-height: 85vh;
+  }
+}
+
+.mobile-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  text-decoration: none;
+  color: #888888;
+  font-size: 0.68rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  flex: 1;
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 6px 0;
+}
+
+.mobile-nav-item.active {
+  color: var(--color-primary, #1a2f22);
+  font-weight: 700;
+}
+
+.mobile-cart-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background-color: #d4af37;
+  color: #1a2f22;
+  font-size: 0.62rem;
+  font-weight: 800;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ================================================
+   SCROLL TO TOP
+   ================================================ */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a2f22, #2b4a36);
+  color: #d4af37;
+  border: 1.5px solid rgba(212, 175, 55, 0.3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(26, 47, 34, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.scroll-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(26, 47, 34, 0.35);
+}
+
+@media (max-width: 767px) {
+  .scroll-top-btn {
+    bottom: 140px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    z-index: 997;
+    opacity: 0.85;
+  }
+}
