@@ -1,5 +1,19 @@
 # Kabgeer Ji — Changelog
 
+## 2026-11-28 (Products Page Banner & Special Bundle Offer Hero)
+
+### Task
+Replace the Products Catalogue page banner with the "Build Your Bundle" banner and add the "Special Bundle Offer! Buy 4 or more products to unlock 10% OFF + 2 FREE Mini Masala Boxes!" hero section matching the Build Your Bundle page.
+
+### Implemented Changes & Verification
+- **CataloguePage (`src/pages/CataloguePage.jsx`)**:
+  - Replaced `catalogueBannerImg` (`catalogue banner.webp`) with `buildBundleBanner` (`build your bundle banner.webp`).
+  - Added the `.bundle-hero` section with the `Special Bundle Offer!` heading and `Buy 4 or more products to unlock 10% OFF + 2 FREE Mini Masala Boxes!` subtitle, matching `BuildBundlePage.jsx`.
+- **CataloguePage Styles (`src/pages/CataloguePage.css`)**:
+  - Added `.bundle-hero` and responsive hero styles scoped to `.catalogue-page` and aligned `.catalogue-container` top margin overlap (`-2.75rem` desktop, `-2rem` mobile).
+- **Verification**:
+  - Verified with `npm run build` and `npm run lint`.
+
 ## 2026-11-17 (Part 6.42: Personalized Order Success Experience, Order Token Personalization & Live WhatsApp Updates)
 
 ### 1. Requirements & Directives

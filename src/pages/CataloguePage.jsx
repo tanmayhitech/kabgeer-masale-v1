@@ -4,7 +4,7 @@ import { SlidersHorizontal, X, Sparkles, Search } from 'lucide-react';
 import { PRODUCTS, CATEGORIES } from '../data/products';
 import ProductCard from '../components/ProductCard';
 import './CataloguePage.css';
-import catalogueBannerImg from '../assets/catalogue banner.webp';
+import buildBundleBanner from '../assets/build your bundle banner.webp';
 
 const CataloguePage = () => {
   const location = useLocation();
@@ -115,12 +115,31 @@ const CataloguePage = () => {
       {/* Banner Section */}
       <section className="catalogue-hero-banner">
         <img
-          src={catalogueBannerImg}
-          alt="Explore Our Authentic Masala Catalogue"
+          src={buildBundleBanner}
+          alt="Build Your Bundle"
           className="catalogue-banner-image"
           fetchPriority="high"
           decoding="async"
         />
+      </section>
+
+      {/* Special Bundle Offer Hero Section */}
+      <section className="bundle-hero">
+        <div className="bundle-hero-ambient-glow" />
+
+        <div className="container bundle-hero-container">
+          <div className="bundle-hero-content">
+
+            <h1 className="hero-title">
+              Special <em>Bundle Offer!</em>
+            </h1>
+
+            <p className="hero-subtitle" style={{ fontSize: '1.15rem', color: '#fcfaf5', marginBottom: '2.5rem' }}>
+              Buy <strong>4 or more products</strong> to unlock <strong style={{ color: '#d4af37' }}>10% OFF + 2 FREE Mini Masala Boxes!</strong>
+            </p>
+
+          </div>
+        </div>
       </section>
 
       <div className="container catalogue-container">
