@@ -15,7 +15,6 @@ const CheckoutPage = lazy(() => import('./pages/CheckoutPage'));
 const OrderSuccessPage = lazy(() => import('./pages/OrderSuccessPage'));
 const LoginPage = lazy(() => import('./pages/LoginPage'));
 const SignupPage = lazy(() => import('./pages/SignupPage'));
-const BuildBundlePage = lazy(() => import('./pages/BuildBundlePage'));
 const BulkEnquiryPage = lazy(() => import('./pages/BulkEnquiryPage'));
 const ProfilePage = lazy(() => import('./pages/ProfilePage'));
 const RecipesPage = lazy(() => import('./pages/RecipesPage'));
@@ -62,7 +61,7 @@ const AppContent = () => {
               <Route path="/checkout" element={<CheckoutPage />} />
               <Route path="/cart" element={<Navigate to="/checkout" replace />} />
               <Route path="/order-success" element={<OrderSuccessPage />} />
-              <Route path="/bundle" element={<BuildBundlePage />} />
+              <Route path="/bundle" element={<Navigate to="/products" replace />} />
               <Route path="/bulk" element={<BulkEnquiryPage />} />
               <Route path="/faqs" element={<FaqsPage />} />
               <Route path="/shipping" element={<ShippingPage />} />

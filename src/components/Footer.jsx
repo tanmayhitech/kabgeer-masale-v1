@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Share2, Globe, Mail, HelpCircle, Truck, RotateCcw, Shield, FileText, Home, Package, BookOpen, Info, Phone, Heart, Award } from 'lucide-react';
+import { Share2, Globe, Mail, HelpCircle, Truck, RotateCcw, Shield, FileText, Home, Package, BookOpen, Info, Phone, Heart } from 'lucide-react';
 import './Footer.css';
 import logo from '../assets/logo.png';
 
@@ -83,12 +83,6 @@ const Footer = () => {
               <Link to="/products">
                 <div className="policy-item-icon"><Package size={15} /></div>
                 <span>Masala Catalogue</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/bundle">
-                <div className="policy-item-icon"><Award size={15} /></div>
-                <span>Build Your Bundle</span>
               </Link>
             </li>
             <li>

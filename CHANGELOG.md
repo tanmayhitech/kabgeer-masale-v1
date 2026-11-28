@@ -1,5 +1,22 @@
 # Kabgeer Ji — Changelog
 
+## 2026-11-28 (Remove Build Your Bundle Page)
+
+### Task
+Remove the standalone Build Your Bundle page (`BuildBundlePage`) and consolidate its navigation and links to the Products page (`/products`).
+
+### Implemented Changes & Verification
+- **Removed Files**:
+  - Deleted `src/pages/BuildBundlePage.jsx` and `src/pages/BuildBundlePage.css`.
+- **Routing (`src/App.jsx`)**:
+  - Removed lazy import of `BuildBundlePage` and redirected `/bundle` to `/products`.
+- **Navigation & Links**:
+  - Removed "Build Your Bundle" link from `Header.jsx` (desktop nav and mobile bottom nav) and `Footer.jsx`.
+  - Updated `HomePage.jsx` and `NotFoundPage.jsx` `/bundle` links to `/products`.
+  - Removed `/bundle` entry from `public/sitemap.xml` and `index.html` Schema.org `SiteNavigationElement`.
+- **Verification**:
+  - Verified with `npm run build`.
+
 ## 2026-11-28 (Products Page Banner & Special Bundle Offer Hero)
 
 ### Task

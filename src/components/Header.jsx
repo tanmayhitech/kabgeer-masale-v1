@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
-import { Search, ShoppingBag, X, ArrowUp, Home, Package, Sparkles, ChefHat, Mail } from 'lucide-react';
+import { Search, ShoppingBag, X, ArrowUp, Home, Package, ChefHat, Mail } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { PRODUCTS } from '../data/products';
 import CartDrawer from './CartDrawer';
@@ -143,9 +143,6 @@ const Header = () => {
               <NavLink to="/products" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>
                 <Package size={16} /> Products
               </NavLink>
-              <NavLink to="/bundle" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>
-                <Sparkles size={16} /> Build Your Bundle
-              </NavLink>
               <NavLink to="/recipes" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>
                 <ChefHat size={16} /> Recipes
               </NavLink>
@@ -254,10 +251,6 @@ const Header = () => {
           <NavLink to="/products" className={({ isActive }) => isActive ? "mobile-nav-item active" : "mobile-nav-item"}>
             <Package size={20} />
             <span>Products</span>
-          </NavLink>
-          <NavLink to="/bundle" className={({ isActive }) => isActive ? "mobile-nav-item active" : "mobile-nav-item"}>
-            <Sparkles size={20} />
-            <span>Bundle</span>
           </NavLink>
           <NavLink to="/recipes" className={({ isActive }) => isActive ? "mobile-nav-item active" : "mobile-nav-item"}>
             <ChefHat size={20} />

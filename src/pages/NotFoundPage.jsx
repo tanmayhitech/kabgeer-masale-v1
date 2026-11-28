@@ -42,7 +42,7 @@ const NotFoundPage = () => {
         <div className="notfound-quicklinks">
           <span>Popular destinations:</span>
           <div className="notfound-links-list">
-            <Link to="/bundle">Build Your Bundle (10% Off)</Link>
+            <Link to="/products">Products (Bundle 10% Off)</Link>
             <span className="notfound-dot">•</span>
             <Link to="/recipes">Authentic Recipes</Link>
             <span className="notfound-dot">•</span>

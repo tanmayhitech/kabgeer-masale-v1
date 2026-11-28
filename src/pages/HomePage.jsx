@@ -121,7 +121,7 @@ const HomePage = () => {
               <p className="info-description">
                 We make cooking effortless, so that even a beginner or <span className="highlight-green">non-cook</span> can prepare delicious <span className="highlight-green">authentic royal dishes in minutes</span> using our secret ready-to-cook spice blends.
               </p>
-              <Link to="/bundle" className="btn-order-combo">
+              <Link to="/products" className="btn-order-combo">
                 Craft Your Custom Box <ShoppingBag size={18} />
               </Link>
             </div>

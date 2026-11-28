@@ -76,6 +76,7 @@ Current Branch: v1-release (Synced & Pushed across main, master & v1-release to 
 | Part 6.11 | Custom Luxury 404 Page & Admin Stealth Redirection to Home | ✅ COMPLETE & VERIFIED |
 | Part 6.12 | Coupon Code Tracking & Admin Single Order Deletion | ✅ COMPLETE & VERIFIED |
 | Catalogue Banner & Offer | Updated Products Catalogue page banner to Build Your Bundle banner and added Special Bundle Offer hero text | ✅ COMPLETE |
+| Remove Build Bundle Page | Removed standalone `/bundle` (`BuildBundlePage`) and consolidated navigation/links to `/products` | ✅ COMPLETE |
 
 ---
 
